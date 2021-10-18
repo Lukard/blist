@@ -5,9 +5,9 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:flutter_test/flutter_test.dart';
 import 'package:blist/app/app.dart';
 import 'package:blist/counter/counter.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('App', () {
