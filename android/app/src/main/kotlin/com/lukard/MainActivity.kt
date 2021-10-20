@@ -1,4 +1,4 @@
-package com.example.verygoodcore.blist
+package com.lukard.blist
 
 import io.flutter.embedding.android.FlutterActivity
 
