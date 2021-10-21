@@ -1,3 +1,4 @@
+// Copyright (c) 2021, Rubén Abad Sánchez
 // Copyright (c) 2021, Very Good Ventures
 // https://verygood.ventures
 //
@@ -7,6 +8,7 @@
 
 import 'package:blist/counter/counter.dart';
 import 'package:blist/l10n/l10n.dart';
+import 'package:blist/xds/style/text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -21,6 +23,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(
           accentColor: const Color(0xFF13B9FF),
         ),
+        textTheme: textTheme,
       ),
       localizationsDelegates: const [
         AppLocalizations.delegate,
