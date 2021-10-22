@@ -4,8 +4,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:blist/xds/style/text_button_theme.dart';
-import 'package:blist/xds/style/text_theme.dart';
+import 'package:blist/xds/atom/button.dart';
+import 'package:blist/xds/style/brightness_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
@@ -15,20 +15,15 @@ class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Storybook(
-      theme: ThemeData(
-        textTheme: textTheme,
-        textButtonTheme: textButtonTheme,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       children: [
         Story(
             name: 'Button',
             builder: (BuildContext context, KnobsBuilder knobs) {
-              return TextButton(
+              return Button(
                 onPressed: knobs.boolean(label: 'Enabled') ? () {} : null,
-                child: Text(
-                  'Button'.toUpperCase(),
-                  style: Theme.of(context).textTheme.button,
-                ),
+                text: 'Button',
               );
             }),
       ],
