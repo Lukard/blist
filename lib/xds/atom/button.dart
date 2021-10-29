@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:blist/xds/style/size.dart';
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
@@ -21,13 +22,11 @@ class Button extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 12,
+        padding: EdgeInsets.symmetric(
+          horizontal: size.one,
+          vertical: size.three,
         ),
-        child: Text(
-          text.toUpperCase(),
-        ),
+        child: Text(text.toUpperCase()),
       ),
     );
   }

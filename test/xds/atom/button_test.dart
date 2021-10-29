@@ -7,6 +7,8 @@
 import 'dart:async';
 
 import 'package:blist/xds/atom/button.dart';
+import 'package:blist/xds/style/size.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../helpers/pump_app.dart';
@@ -24,5 +26,31 @@ void main() {
       await tester.tap(find.byType(Button));
       expect(completer.isCompleted, true);
     });
+
+    testWidgets('contains ElevatedButton', (tester) async {
+      await tester.pumpApp(const Button());
+      expect(find.byType(ElevatedButton), findsOneWidget);
+    });
+
+    testWidgets(
+      'contains text padded [vertical: size.three, horizontal: size.one]',
+      (tester) async {
+        await tester.pumpApp(const Button(text: 'Test'));
+
+        final elevatedButton = find
+            .byType(ElevatedButton)
+            .evaluate()
+            .first
+            .widget as ElevatedButton;
+
+        expect(elevatedButton.child, isA<Padding>());
+
+        final padding = elevatedButton.child! as Padding;
+
+        expect(padding.padding.vertical, size.three * 2);
+        expect(padding.padding.horizontal, size.one * 2);
+        expect(padding.child, isA<Text>());
+      },
+    );
   });
 }

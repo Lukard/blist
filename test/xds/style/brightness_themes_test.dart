@@ -23,8 +23,30 @@ void main() {
             .black
             .merge(textTheme),
       );
-      expect(lightTheme.elevatedButtonTheme, elevatedButtonTheme);
+      // Elevated button theme equality is not ensured on MaterialStateProperty
+      // properties. Elevation 0 and foreground color will be checked to ensure
+      // valid elevated button theme.
+      expect(
+        lightTheme.elevatedButtonTheme.style!.elevation!
+            .resolve(MaterialState.values.toSet()),
+        getElevatedButtonTheme(lightColorScheme)
+            .style!
+            .elevation!
+            .resolve(MaterialState.values.toSet()),
+      );
+      expect(
+        lightTheme.elevatedButtonTheme.style!.foregroundColor!
+            .resolve(MaterialState.values.toSet()),
+        getElevatedButtonTheme(lightColorScheme)
+            .style!
+            .foregroundColor!
+            .resolve(MaterialState.values.toSet()),
+      );
       expect(lightTheme.colorScheme, lightColorScheme);
+      expect(lightTheme.splashFactory, NoSplash.splashFactory);
+      expect(lightTheme.highlightColor, Colors.transparent);
+      expect(lightTheme.hoverColor, Colors.transparent);
+      expect(lightTheme.focusColor, Colors.transparent);
     });
   });
 
@@ -37,8 +59,30 @@ void main() {
             .white
             .merge(textTheme),
       );
-      expect(darkTheme.elevatedButtonTheme, elevatedButtonTheme);
+      // Elevated button theme equality is not ensured on MaterialStateProperty
+      // properties. Elevation 0 and foreground color will be checked to ensure
+      // valid elevated button theme.
+      expect(
+        darkTheme.elevatedButtonTheme.style!.elevation!
+            .resolve(MaterialState.values.toSet()),
+        getElevatedButtonTheme(darkColorScheme)
+            .style!
+            .elevation!
+            .resolve(MaterialState.values.toSet()),
+      );
+      expect(
+        darkTheme.elevatedButtonTheme.style!.foregroundColor!
+            .resolve(MaterialState.values.toSet()),
+        getElevatedButtonTheme(darkColorScheme)
+            .style!
+            .foregroundColor!
+            .resolve(MaterialState.values.toSet()),
+      );
       expect(darkTheme.colorScheme, darkColorScheme);
+      expect(darkTheme.splashFactory, NoSplash.splashFactory);
+      expect(darkTheme.highlightColor, Colors.transparent);
+      expect(darkTheme.hoverColor, Colors.transparent);
+      expect(darkTheme.focusColor, Colors.transparent);
     });
   });
 }

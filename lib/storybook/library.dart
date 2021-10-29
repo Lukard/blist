@@ -19,13 +19,14 @@ class Library extends StatelessWidget {
       darkTheme: darkTheme,
       children: [
         Story(
-            name: 'Button',
-            builder: (BuildContext context, KnobsBuilder knobs) {
-              return Button(
-                onPressed: knobs.boolean(label: 'Enabled') ? () {} : null,
-                text: 'Button',
-              );
-            }),
+          name: 'Button',
+          builder: (BuildContext context, KnobsBuilder knobs) {
+            return Button(
+              onPressed: knobs.boolean(label: 'Enabled') ? () {} : null,
+              text: knobs.text(label: 'Text', initial: 'Button'),
+            );
+          },
+        ),
       ],
     );
   }

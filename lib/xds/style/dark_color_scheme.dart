@@ -7,16 +7,17 @@
 import 'package:flutter/material.dart';
 
 const darkColorScheme = ColorScheme(
-    primary: Colors.white,
-    primaryVariant: Colors.white,
-    secondary: Colors.white,
-    secondaryVariant: Colors.white,
-    surface: Colors.black,
-    background: Colors.black,
-    error: Colors.red,
-    onPrimary: Colors.black,
-    onSecondary: Colors.black,
-    onSurface: Colors.white,
-    onBackground: Colors.white,
-    onError: Colors.white,
-    brightness: Brightness.dark);
+  primary: Colors.white,
+  primaryVariant: Colors.white,
+  secondary: Colors.white,
+  secondaryVariant: Colors.white,
+  surface: Colors.black,
+  background: Colors.black,
+  error: Colors.red,
+  onPrimary: Colors.black,
+  onSecondary: Colors.black,
+  onSurface: Colors.white,
+  onBackground: Colors.white,
+  onError: Colors.white,
+  brightness: Brightness.dark,
+);
