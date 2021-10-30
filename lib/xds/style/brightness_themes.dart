@@ -14,10 +14,15 @@ final ThemeData lightTheme = _getThemeDataWithBrightness(Brightness.light);
 final ThemeData darkTheme = _getThemeDataWithBrightness(Brightness.dark);
 
 ThemeData _getThemeDataWithBrightness(Brightness brightness) {
+  final colorScheme =
+      brightness == Brightness.light ? lightColorScheme : darkColorScheme;
   return ThemeData(
     textTheme: textTheme,
-    elevatedButtonTheme: elevatedButtonTheme,
-    colorScheme:
-        brightness == Brightness.light ? lightColorScheme : darkColorScheme,
+    elevatedButtonTheme: getElevatedButtonTheme(colorScheme),
+    colorScheme: colorScheme,
+    splashFactory: NoSplash.splashFactory,
+    highlightColor: Colors.transparent,
+    hoverColor: Colors.transparent,
+    focusColor: Colors.transparent,
   );
 }
