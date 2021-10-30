@@ -76,7 +76,7 @@ class PaddedStadiumBorder extends OutlinedBorder {
   }
 
   @override
-  int get hashCode => hashValues(side, side.hashCode);
+  int get hashCode => hashValues(ringPadding, side.hashCode);
 
   @override
   EdgeInsetsGeometry get dimensions => EdgeInsets.all(side.width);
