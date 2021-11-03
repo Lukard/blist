@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:blist/xds/style/app_bar_theme.dart';
 import 'package:blist/xds/style/dark_color_scheme.dart';
 import 'package:blist/xds/style/elevated_button_theme.dart';
 import 'package:blist/xds/style/light_color_scheme.dart';
@@ -18,6 +19,7 @@ ThemeData _getThemeDataWithBrightness(Brightness brightness) {
       brightness == Brightness.light ? lightColorScheme : darkColorScheme;
   return ThemeData(
     textTheme: textTheme,
+    appBarTheme: getAppBarTheme(colorScheme),
     elevatedButtonTheme: getElevatedButtonTheme(colorScheme),
     colorScheme: colorScheme,
     splashFactory: NoSplash.splashFactory,
