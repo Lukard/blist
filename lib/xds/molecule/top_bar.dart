@@ -40,11 +40,11 @@ class MainAction {
   const MainAction(this.text, this.action);
 
   final String text;
-  final Function() action;
+  final Function()? action;
 
   @override
   bool operator ==(Object other) {
-    if (other.runtimeType == runtimeType) {
+    if (other.runtimeType != runtimeType) {
       return false;
     }
     return other is MainAction && other.text == text && other.action == action;

@@ -38,7 +38,7 @@ class Library extends StatelessWidget {
                 title: knobs.text(label: 'Title', initial: 'Title'),
                 mainAction: MainAction(
                   knobs.text(label: 'Main Action', initial: 'Action'),
-                  () {},
+                  knobs.boolean(label: 'Enabled') ? () {} : null,
                 ),
               ),
             );
