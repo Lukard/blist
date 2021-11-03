@@ -4,14 +4,14 @@ Here you will find the list of available atoms to build your components.
 
 ## Button
 
-Indicate available action to the user
+Indicates available action to the user
 
 ### Properties
 
-| Name          | Type        | Default value | Description                                |
-| ------------- | ----------- | ------------- | ------------------------------------------ |
-| **text**      | String      | '' (empty)    | Text displayed in the center of the button |
-| **onPressed** | Function()? | null          | method executed when button is tapped.     |
+| Name          | Type        | Default value | Description                                 |
+| ------------- | ----------- | ------------- | ------------------------------------------- |
+| **text**      | String      | '' (empty)    | Text displayed in the center of the button. |
+| **onPressed** | Function()? | null          | Method executed when button is tapped.      |
 
 ### States
 

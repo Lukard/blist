@@ -6,6 +6,7 @@
 
 import 'package:blist/storybook/library.dart';
 import 'package:blist/xds/atom/button.dart';
+import 'package:blist/xds/molecule/top_bar.dart';
 import 'package:blist/xds/style/brightness_themes.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
@@ -24,9 +25,20 @@ void main() {
 
     testWidgets('contains Button component', (tester) async {
       await tester.pumpWidget(const Library());
+      await tester.tap(find.text('Atoms'));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('Button'));
       await tester.pumpAndSettle();
       expect(find.byType(Button), findsOneWidget);
+    });
+
+    testWidgets('contains TopBar component', (tester) async {
+      await tester.pumpWidget(const Library());
+      await tester.tap(find.text('Molecules'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('TopBar'));
+      await tester.pumpAndSettle();
+      expect(find.byType(TopBar), findsOneWidget);
     });
   });
 }

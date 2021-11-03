@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:blist/xds/style/app_bar_theme.dart';
 import 'package:blist/xds/style/brightness_themes.dart';
 import 'package:blist/xds/style/dark_color_scheme.dart';
 import 'package:blist/xds/style/elevated_button_theme.dart';
@@ -42,6 +43,7 @@ void main() {
             .foregroundColor!
             .resolve(MaterialState.values.toSet()),
       );
+      expect(lightTheme.appBarTheme, getAppBarTheme(lightColorScheme));
       expect(lightTheme.colorScheme, lightColorScheme);
       expect(lightTheme.splashFactory, NoSplash.splashFactory);
       expect(lightTheme.highlightColor, Colors.transparent);
@@ -78,6 +80,7 @@ void main() {
             .foregroundColor!
             .resolve(MaterialState.values.toSet()),
       );
+      expect(darkTheme.appBarTheme, getAppBarTheme(darkColorScheme));
       expect(darkTheme.colorScheme, darkColorScheme);
       expect(darkTheme.splashFactory, NoSplash.splashFactory);
       expect(darkTheme.highlightColor, Colors.transparent);

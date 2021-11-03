@@ -11,55 +11,55 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('textTheme', () {
     test('contains MerriweatherSans headline 1 values', () {
-      expect(textTheme.headline1!.fontFamily, 'MerriweatherSans_300');
-      expect(textTheme.headline1!.fontSize, 92);
+      expect(textTheme.headline1!.fontFamily, 'Rubik_300');
+      expect(textTheme.headline1!.fontSize, 98);
       expect(textTheme.headline1!.fontWeight, FontWeight.w300);
       expect(textTheme.headline1!.letterSpacing, -1.5);
     });
 
     test('contains MerriweatherSans headline 2 values', () {
-      expect(textTheme.headline2!.fontFamily, 'MerriweatherSans_300');
-      expect(textTheme.headline2!.fontSize, 57);
+      expect(textTheme.headline2!.fontFamily, 'Rubik_300');
+      expect(textTheme.headline2!.fontSize, 61);
       expect(textTheme.headline2!.fontWeight, FontWeight.w300);
       expect(textTheme.headline2!.letterSpacing, -0.5);
     });
 
     test('contains MerriweatherSans headline 3 values', () {
-      expect(textTheme.headline3!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.headline3!.fontSize, 46);
+      expect(textTheme.headline3!.fontFamily, 'Rubik_regular');
+      expect(textTheme.headline3!.fontSize, 49);
       expect(textTheme.headline3!.fontWeight, FontWeight.w400);
     });
 
     test('contains MerriweatherSans headline 4 values', () {
-      expect(textTheme.headline4!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.headline4!.fontSize, 32);
+      expect(textTheme.headline4!.fontFamily, 'Rubik_regular');
+      expect(textTheme.headline4!.fontSize, 35);
       expect(textTheme.headline4!.fontWeight, FontWeight.w400);
       expect(textTheme.headline4!.letterSpacing, 0.25);
     });
 
     test('contains MerriweatherSans headline 5 values', () {
-      expect(textTheme.headline5!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.headline5!.fontSize, 23);
+      expect(textTheme.headline5!.fontFamily, 'Rubik_regular');
+      expect(textTheme.headline5!.fontSize, 24);
       expect(textTheme.headline5!.fontWeight, FontWeight.w400);
     });
 
     test('contains MerriweatherSans headline 6 values', () {
-      expect(textTheme.headline6!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.headline6!.fontSize, 19);
+      expect(textTheme.headline6!.fontFamily, 'Rubik_500');
+      expect(textTheme.headline6!.fontSize, 20);
       expect(textTheme.headline6!.fontWeight, FontWeight.w500);
       expect(textTheme.headline6!.letterSpacing, 0.15);
     });
 
     test('contains MerriweatherSans subtitle 1 values', () {
-      expect(textTheme.subtitle1!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.subtitle1!.fontSize, 15);
+      expect(textTheme.subtitle1!.fontFamily, 'Rubik_regular');
+      expect(textTheme.subtitle1!.fontSize, 16);
       expect(textTheme.subtitle1!.fontWeight, FontWeight.w400);
       expect(textTheme.subtitle1!.letterSpacing, 0.15);
     });
 
     test('contains MerriweatherSans subtitle 2 values', () {
-      expect(textTheme.subtitle2!.fontFamily, 'MerriweatherSans_regular');
-      expect(textTheme.subtitle2!.fontSize, 13);
+      expect(textTheme.subtitle2!.fontFamily, 'Rubik_500');
+      expect(textTheme.subtitle2!.fontSize, 14);
       expect(textTheme.subtitle2!.fontWeight, FontWeight.w500);
       expect(textTheme.subtitle2!.letterSpacing, 0.1);
     });
